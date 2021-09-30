@@ -9,7 +9,8 @@ from aiogram.utils import executor
 
 from api.utils.static_text import START, TYPE
 
-from api.model import img_search
+# from api.model import img_search
+from api.recommender import rec_music
 
 # Логирование
 logging.basicConfig(filename='log.log',
@@ -50,6 +51,8 @@ async def echo_message(message: types.Message):
         user_name = message.from_user.full_name
         user_id = message.from_user.id
         logging.info(f'Нам написал {user_name}, его id = {user_id}')
+        await bot.send_message(message.from_user.id, rec_music(message.text))
+
         await bot.send_message(message.from_user.id, img_search(message.text))
 
     
@@ -58,3 +61,4 @@ async def echo_message(message: types.Message):
 
 if __name__ == '__main__':
     executor.start_polling(dp)
+    
