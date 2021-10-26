@@ -13,9 +13,7 @@ def artist_dict(name):
 
         text_dict = pickle.load(open('api/data/text_dict.pickle', 'rb'))
         with open(f'api/data/songs_txts/{name}.txt', encoding='utf-8', newline='') as f:
-            song = f.read()
-            print(song)
-            
+            song = f.read()            
             text_dict[name] = clean_and_lemmatize(song)
 
             pickle.dump(text_dict, open('api/data/text_dict.pickle', 'wb'))

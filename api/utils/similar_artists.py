@@ -9,3 +9,5 @@ def similiar_artists(name):
 
 # df_art_cos = pd.read_csv('api/data/datadf_art_cos.csv', index_col=0)
 # print(df_art_cos.head())
+
+

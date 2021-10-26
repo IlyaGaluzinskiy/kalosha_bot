@@ -13,3 +13,6 @@ RUN pip3 install -r requirements.txt
 # EXPOSE 6666
 ENTRYPOINT ['python']
 CMD ['bot.py']
+
+
+

@@ -10,7 +10,7 @@ def parser(name, k=10):
     c = 0 
     import lyricsgenius as lg
     try:
-        genius = lg.Genius(API_TOKEN,skip_non_songs=True, excluded_terms=["(Remix)", "(Live)"], remove_section_headers=True, sleep_time=1 , retries=2)
+        genius = lg.Genius(API_TOKEN, skip_non_songs=True, excluded_terms=["(Remix)", "(Live)"], remove_section_headers=True, sleep_time=1 , retries=2)
         response = genius.search_artist(name, max_songs=k, sort='popularity')
         songs = response.songs   
         s = [song.lyrics for song in songs]

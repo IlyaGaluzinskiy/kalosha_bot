@@ -1,4 +1,3 @@
-from nltk import text
 import pandas as pd
 import pickle
 
@@ -19,4 +18,4 @@ def tf_idf():
     df_art_cos.to_csv('api/data/datadf_art_cos.csv')
 
 # text_dict = pickle.load(open('api/data/text_dict.pickle', 'rb'))
-# print(text_dict['Scooter'])
+# print(text_dict.keys())

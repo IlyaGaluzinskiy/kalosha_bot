@@ -1,8 +1,9 @@
 START = '''
-Привет %s! \nТы можешь прислать слово в одно слово (слово длиной не более 10 символов), а я найду картинку!
-Список команд:
-/start - перезапуск
-/info - расскажу о себе
+Hi %s! \nTired of listening to the same artists? Write an artist you are interested in and i will suggest artists with similar vocabulary (lyrics)!"
+LIST of commands:
+/start - restart
+/about - about
+/list - list of artists know by bot
 '''
 
 TYPE = ['text']
