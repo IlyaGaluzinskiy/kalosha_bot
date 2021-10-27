@@ -15,9 +15,9 @@ from api.recommender import rec_music
 from api.utils.artist_list import artist_list
 
 # Логирование
-logging.basicConfig(filename='log.log',
-                    encoding='utf-8',
-                    level=logging.INFO)
+# logging.basicConfig(filename='log.log',
+#                     encoding='utf-8',
+#                     level=logging.INFO)
 
 # Загрузка токена через env
 load_dotenv()
