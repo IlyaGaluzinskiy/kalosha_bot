@@ -3,7 +3,7 @@ Hi %s! \nTired of listening to the same artists? Write an artist you are interes
 LIST of commands:
 /start - restart
 /about - about
-/list - list of artists know by bot
+/list - list of 20 random artists known by bot
 '''
 
 TYPE = ['text']
