@@ -13,7 +13,6 @@ from api.utils.static_text import START, TYPE
 from api.model import img_search
 from api.recommender import rec_music
 from api.utils.artist_list import artist_list
-from aiogram.types import FSInputFile
 
 # Логирование
 logging.basicConfig(filename='log.log',
