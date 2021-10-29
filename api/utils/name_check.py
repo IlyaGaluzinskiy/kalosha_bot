@@ -19,7 +19,8 @@ def name_check(name):
         return true_name
 
     except:
-        print(f"some exception at {name}")
+        print(f"{name} not found in Genius")
+        return 'name_error'
     # return name
 
 
