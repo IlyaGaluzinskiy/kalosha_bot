@@ -1,7 +1,6 @@
 import os
 
 from dotenv import load_dotenv
-# from joblib import Parallel, delayed
 
 load_dotenv()
 API_TOKEN = os.getenv('GENIUS_TOKEN')
@@ -22,5 +21,3 @@ def parser(name, k=10):
         print(f"Songs grabbed:{len(s)}")   
     except:
         print(f"some exception at {name}: {c}")
-
-# songs = Parallel(n_jobs=20, verbose=1)(delayed(get_lyrics)(i, 10) for i in names)

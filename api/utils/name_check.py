@@ -21,8 +21,3 @@ def name_check(name):
     except:
         print(f"{name} not found in Genius")
         return 'name_error'
-    # return name
-
-
-
-# print(name_checker('black eyed pee'))

@@ -31,17 +31,3 @@ def artist_dict(name):
 
         pickle.dump(text_dict, open('api/data/text_dict.pickle', 'wb'))
 
-
-
-# artist_dict('Korn')
-
-# text_dict = pickle.load(open('api/data/text_dict.pickle', 'rb'))
-# # del text_dict['Korn']
-# print(text_dict['Korn'])
-# pickle.dump(text_dict, open('api/data/text_dict.pickle', 'wb'))
-
-
-# print(text_dict.keys())
-# print(text_dict['U2'])
-
-# print(os.listdir('api/data/'))
