@@ -8,7 +8,7 @@ from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 
-from api.utils.static_text import ABOUT, START, STICKER
+from api.utils.static_text import ABOUT, START, STICKER, INPUT_ERROR
 
 from api.utils.artist_list import artist_list
 from api.utils.name_check import name_check
@@ -18,7 +18,6 @@ from api.core.tf_idf import tf_idf
 from api.utils.similar_artists import similiar_artists
 # Логирование
 logging.basicConfig(filename='log.log',
-                    encoding='utf-8',
                     level=logging.INFO)
 
 # Загрузка токена через env
@@ -76,6 +75,12 @@ async def echo_message(message: types.Message): # waits txt
             await bot.send_message(user_id, similiar_artists(name))
         else:
             await bot.send_message(user_id, similiar_artists(name))
+
+# обработчик на случай, если был прислан не текст, а стикер, фото или любой другой тип данных
+@dp.message_handler(content_types='any')
+async def unknown_message(message: types.Message):
+    user_id = message.from_user.id
+    await bot.send_message(user_id, INPUT_ERROR)
 
 if __name__ == '__main__':
     executor.start_polling(dp)
