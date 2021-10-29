@@ -65,7 +65,7 @@ async def echo_message(message: types.Message): # waits txt
         elif name not in exist_authors.values:
             logging.info(f'Database upd: {name}')
             await bot.send_sticker(user_id, STICKER)
-            await bot.send_message(user_id, 'Updating database - this might take a while')
+            # await bot.send_message(user_id, 'Updating database - this might take a while')
             parser(name)
             artist_dict(name)
             tf_idf()
